@@ -1,6 +1,7 @@
 package design.pattern.SOLID.srp;
 
 import design.pattern.SOLID.srp.impl.Book;
+import design.pattern.SOLID.srp.impl.BookHandler;
 
 /**
  *
@@ -25,7 +26,7 @@ public class App {
 //        Book book=new Book("JAVA",2000,"Harbard Sheild");
 //        book.print();
         System.out.println("With SIP");
-        Book books=new Book("Programming C", 400, "Balagrosami");
+        BookHandler books=new Book("Programming C", 400, "Balagrosami");
         books.save();
         books.print();
         

@@ -4,7 +4,9 @@ package design.pattern.SOLID.srp.impl;
  *
  * @author maidul
  */
-public class Book implements PrintHandler,Persistance{
+public class Book implements BookHandler{
+    
+    private BookPersistance persistance;
 
     private String name;
     private int noOfPages;
@@ -14,6 +16,7 @@ public class Book implements PrintHandler,Persistance{
         this.name = name;
         this.noOfPages = noOfPages;
         this.author = author;
+        this.persistance=new BookPersistance();
     }
 
     public String getName() {
@@ -41,11 +44,6 @@ public class Book implements PrintHandler,Persistance{
     }
 
     @Override
-    public String toString() {
-        return "Book " + " name = " + name + ", no Of Pages = " + noOfPages + ", author = " + author;
-    }
-
-    @Override
     public void print() {
         System.out.println("Print start ......");
         System.out.println("Book " + " name = " + name + ", no Of Pages = " + noOfPages + ", author = " + author);
@@ -54,8 +52,11 @@ public class Book implements PrintHandler,Persistance{
 
     @Override
     public void save() {
-        System.out.println("Saving.....");
-        System.out.println("Book " + " name = " + name + ", no Of Pages = " + noOfPages + ", author = " + author);
-        System.out.println("Saved successfully..");
+        persistance.save(this);
+    }
+    
+    @Override
+    public String toString() {
+        return "Book " + " name = " + name + ", no Of Pages = " + noOfPages + ", author = " + author;
     }
 }
