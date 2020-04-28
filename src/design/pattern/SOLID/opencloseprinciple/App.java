@@ -35,7 +35,11 @@ package design.pattern.SOLID.opencloseprinciple;
  * 1. Strategy pattern
  * 2. template pattern
  * 
- *
+ *                  Sorter
+ *                  /    \
+ *                 /      \
+ *            MerseSort   InsertionSort
+ *            In SortManager Has a relation Sorter
  * 
  */
 public class App {
