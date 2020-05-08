@@ -1,4 +1,4 @@
-package design.pattern.SOLID.singleResponsibiltyPrinciple.impl;
+package design.pattern.SOLID.singleResponsibilityPrinciple.impl;
 
 /**
  *
