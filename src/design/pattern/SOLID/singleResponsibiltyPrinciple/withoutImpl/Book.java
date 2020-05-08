@@ -1,22 +1,21 @@
-package design.pattern.SOLID.srp.impl;
+package design.pattern.SOLID.singleResponsibiltyPrinciple.withoutImpl;
 
 /**
  *
  * @author maidul
  */
-public class Book implements BookHandler{
-    
-    private BookPersistance persistance;
+public class Book {
 
+    //feature or attributes
     private String name;
     private int noOfPages;
     private String author;
 
+    //custom constructor
     public Book(String name, int noOfPages, String author) {
         this.name = name;
         this.noOfPages = noOfPages;
         this.author = author;
-        this.persistance=new BookPersistance();
     }
 
     public String getName() {
@@ -43,20 +42,19 @@ public class Book implements BookHandler{
         this.author = author;
     }
 
-    @Override
+    // here break the rules of SINGLE RESPONSIBILITY PRINCIPLE
+    public void save() {
+        System.out.println("Book saved!!!!");
+    }
+
+    // here break the rules of SINGLE RESPONSIBILITY PRINCIPLE
     public void print() {
-        System.out.println("Print start ......");
-        System.out.println("Book " + " name = " + name + ", no Of Pages = " + noOfPages + ", author = " + author);
-        System.out.println("Print successfully..");
+        System.out.println("Printing.................");
+        System.out.println("Book " + " name = " + name + ", noOfPages = " + noOfPages + ", author = " + author);
     }
 
     @Override
-    public void save() {
-        persistance.save(this);
-    }
-    
-    @Override
     public String toString() {
-        return "Book " + " name = " + name + ", no Of Pages = " + noOfPages + ", author = " + author;
+        return "Book " + " name = " + name + ", noOfPages = " + noOfPages + ", author = " + author;
     }
 }

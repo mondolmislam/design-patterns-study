@@ -1,7 +1,7 @@
-package design.pattern.SOLID.srp;
+package design.pattern.SOLID.singleResponsibiltyPrinciple;
 
-import design.pattern.SOLID.srp.impl.Book;
-import design.pattern.SOLID.srp.impl.BookHandler;
+import design.pattern.SOLID.singleResponsibiltyPrinciple.impl.Book;
+import design.pattern.SOLID.singleResponsibiltyPrinciple.impl.BookHandler;
 
 /**
  *
