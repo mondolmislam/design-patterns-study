@@ -1,4 +1,4 @@
-package design.pattern.command;
+package design.pattern.behavioral.command.anotherEx;
 
 /**
  *

@@ -1,4 +1,4 @@
-package design.pattern.command.anotherEx;
+package design.pattern.behavioral.command.anotherEx;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingDeque;
